@@ -1,0 +1,45 @@
+.form__section{
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    height: 50%;
+    width: 75%;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(250, 237, 218);
+    border-radius: 13px;
+}
+
+.form__group{
+    flex: 1;
+    min-width: 200px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form__input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 24px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    border-radius: 6px;
+}
