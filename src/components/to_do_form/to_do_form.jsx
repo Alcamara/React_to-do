@@ -2,18 +2,8 @@ import { useState } from "react";
 import "./to_do_form.css";
 
 
+export default function ToDoForm({ onAddTask, onChange, task }){
 
-
-export default function ToDoForm(){
-
-    const [task, setTask] = useState("");
-
-    const handleChange = ({target}) => {
-        setTask(target.value)
-    }
-
-    const handleSubmition = () => console.log(task);
-    
 
     return (
         <>
@@ -25,13 +15,13 @@ export default function ToDoForm(){
                         <input
                             className="form__input" 
                             type="text"
-                            value={task}
-                            onChange={handleChange} 
+                            value={task.description}
+                            onChange={onChange} 
                         />
                     </div>
                 </div>
                 <div className="row">
-                    <div className="btn">Submit</div>
+                    <div className="btn" onClick={onAddTask}>Submit</div>
                 </div>
             </div>
          </div>
