@@ -33,6 +33,7 @@
     border: 2px solid #ddd;
     border-radius: 8px;
     transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -42,4 +43,9 @@
     text-align: center;
     background-color: black;
     border-radius: 6px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.884);
 }
