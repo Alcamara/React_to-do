@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useContext } from "react";
 import "./to_do_form.css";
 
+import TasksContext from '../../context/TasksContext/TasksContext'
 
-export default function ToDoForm({ onAddTask, onChange, task }){
 
+export default function ToDoForm(){
+    const {states, actions} = useContext(TasksContext);
+    const {task} = states;
+    const { handleChange, handleAddTask} = actions;
 
     return (
         <>
@@ -16,12 +21,12 @@ export default function ToDoForm({ onAddTask, onChange, task }){
                             className="form__input" 
                             type="text"
                             value={task.description}
-                            onChange={onChange} 
+                            onChange={handleChange} 
                         />
                     </div>
                 </div>
                 <div className="row">
-                    <div className="btn" onClick={onAddTask}>Submit</div>
+                    <div className="btn" onClick={handleAddTask}>Submit</div>
                 </div>
             </div>
          </div>
